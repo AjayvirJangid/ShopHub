@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopHub is a modern, responsive e-commerce storefront for electronics, fashion, home, beauty, books, gaming, sports, and more.">
+  <meta name="keywords" content="ShopHub, ecommerce, online shopping, deals, electronics, fashion, home decor">
+  <meta name="author" content="ShopHub">
+  <meta name="theme-color" content="#5b5cf6">
+  <title>ShopHub - Premium Online Shopping</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="header-shell">
+      <button class="hamburger" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="#top" class="logo" aria-label="ShopHub home">
+        <span class="logo-mark"><i class="fa-solid fa-bag-shopping"></i></span>
+        <span>ShopHub</span>
+      </a>
+
+      <form class="search-box" id="searchForm" role="search">
+        <select id="categoryFilter" aria-label="Choose category">
+          <option value="all">All</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Home Decor">Home</option>
+          <option value="Kitchen">Kitchen</option>
+          <option value="Gaming">Gaming</option>
+          <option value="Books">Books</option>
+          <option value="Sports">Sports</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Beauty">Beauty</option>
+          <option value="Smart Home">Smart Home</option>
+          <option value="Shoes">Shoes</option>
+          <option value="Accessories">Accessories</option>
+        </select>
+        <label class="sr-only" for="searchInput">Search products</label>
+        <input id="searchInput" type="search" placeholder="Search for products, brands and more" autocomplete="off">
+        <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="suggestions" id="suggestions" role="listbox" aria-label="Search suggestions"></div>
+      </form>
+
+      <div class="header-actions">
+        <button class="location-btn" type="button" aria-label="Select delivery location">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>New York</span>
+        </button>
+        <button class="text-btn" type="button">Login</button>
+        <button class="gradient-btn small" type="button">Sign Up</button>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+        <button class="icon-btn" id="wishlistBtn" type="button" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i><span class="count" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-btn" id="cartBtn" type="button" aria-label="Cart">
+          <i class="fa-solid fa-cart-shopping"></i><span class="count" id="cartCount">0</span>
+        </button>
+        <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80" alt="User avatar" loading="lazy">
+      </div>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary navigation">
+      <a href="#top"><i class="fa-solid fa-house"></i>Home</a>
+      <a href="#flash"><i class="fa-solid fa-bolt"></i>Today's Deals</a>
+      <a href="#products" data-nav-category="Electronics"><i class="fa-solid fa-mobile-screen"></i>Mobiles</a>
+      <a href="#products" data-nav-category="Electronics"><i class="fa-solid fa-headphones"></i>Electronics</a>
+      <a href="#products" data-nav-category="Fashion"><i class="fa-solid fa-shirt"></i>Fashion</a>
+      <a href="#products" data-nav-category="Home Decor"><i class="fa-solid fa-couch"></i>Home</a>
+      <a href="#products" data-nav-category="Beauty"><i class="fa-solid fa-spa"></i>Beauty</a>
+      <a href="#products" data-nav-category="Books"><i class="fa-solid fa-book-open"></i>Books</a>
+      <a href="#products" data-nav-category="Gaming"><i class="fa-solid fa-gamepad"></i>Gaming</a>
+      <a href="#products" data-nav-category="Sports"><i class="fa-solid fa-dumbbell"></i>Sports</a>
+      <a href="#products" data-nav-category="Furniture"><i class="fa-solid fa-chair"></i>Furniture</a>
+      <a href="#products" data-nav-category="Smart Home"><i class="fa-solid fa-blender"></i>Appliances</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero swiper" aria-label="Featured offers">
+      <div class="swiper-wrapper">
+        <article class="swiper-slide hero-slide" style="--hero:url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1800&q=80')">
+          <div class="hero-content reveal">
+            <span>Fresh Tech Week</span>
+            <h1>Smart gear for the way you live.</h1>
+            <p>Save on audio, wearables, laptops and connected home essentials.</p>
+            <a href="#products" class="gradient-btn">Shop Now</a>
+          </div>
+        </article>
+        <article class="swiper-slide hero-slide" style="--hero:url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1800&q=80')">
+          <div class="hero-content">
+            <span>Style Refresh</span>
+            <h1>Everyday fashion with standout details.</h1>
+            <p>Premium looks, easy layers and limited-time wardrobe deals.</p>
+            <a href="#products" class="gradient-btn">Shop Now</a>
+          </div>
+        </article>
+        <article class="swiper-slide hero-slide" style="--hero:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80')">
+          <div class="hero-content">
+            <span>Home Studio</span>
+            <h1>Make every room feel beautifully useful.</h1>
+            <p>Decor, lighting, furniture and kitchen finds curated for comfort.</p>
+            <a href="#categories" class="gradient-btn">Shop Now</a>
+          </div>
+        </article>
+        <article class="swiper-slide hero-slide" style="--hero:url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1800&q=80')">
+          <div class="hero-content">
+            <span>Play More</span>
+            <h1>Console, PC and mobile gaming upgrades.</h1>
+            <p>Controllers, headsets, chairs and accessories ready for marathon sessions.</p>
+            <a href="#flash" class="gradient-btn">Shop Now</a>
+          </div>
+        </article>
+        <article class="swiper-slide hero-slide" style="--hero:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1800&q=80')">
+          <div class="hero-content">
+            <span>Active Deals</span>
+            <h1>Train, travel and recover in better gear.</h1>
+            <p>Footwear, bags, fitness tech and essentials for active days.</p>
+            <a href="#products" class="gradient-btn">Shop Now</a>
+          </div>
+        </article>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading reveal">
+        <span>Shop By Category</span>
+        <h2>Featured categories</h2>
+      </div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="section flash-section" id="flash">
+      <div class="section-heading reveal">
+        <span>Limited Stock</span>
+        <h2>Flash deals <strong id="dealTimer">00:00:00</strong></h2>
+      </div>
+      <div class="swiper deal-swiper">
+        <div class="swiper-wrapper" id="dealTrack"></div>
+        <div class="swiper-button-prev deal-prev"></div>
+        <div class="swiper-button-next deal-next"></div>
+      </div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading reveal">
+        <span>Customer Favorites</span>
+        <h2>Best sellers</h2>
+      </div>
+      <div class="filter-chips" id="filterChips" aria-label="Product filters"></div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState">No products match your search.</p>
+    </section>
+
+    <section class="section brand-section">
+      <div class="section-heading reveal">
+        <span>Top Picks</span>
+        <h2>Popular brands</h2>
+      </div>
+      <div class="brand-grid" id="brandGrid"></div>
+    </section>
+
+    <section class="section promo-grid">
+      <article class="promo reveal" style="--promo:url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80')">
+        <div>
+          <span>Gift Edit</span>
+          <h2>Premium finds under $99</h2>
+          <a href="#products" class="outline-btn">Explore</a>
+        </div>
+      </article>
+      <article class="promo reveal" style="--promo:url('https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=1200&q=80')">
+        <div>
+          <span>Weekend Drop</span>
+          <h2>Sneakers, bags and accessories</h2>
+          <a href="#products" class="outline-btn">Shop Deals</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section reviews">
+      <div class="section-heading reveal">
+        <span>Real Stories</span>
+        <h2>Customer reviews</h2>
+      </div>
+      <div class="review-grid">
+        <article class="review-card reveal">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Customer Liam" loading="lazy">
+          <div class="stars">★★★★★</div>
+          <p>"The search and deal filters make shopping fast. My headphones arrived early and looked exactly like the listing."</p>
+          <h3>Liam Carter</h3>
+        </article>
+        <article class="review-card reveal">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Customer Maya" loading="lazy">
+          <div class="stars">★★★★★</div>
+          <p>"I built a full home office cart in minutes. Clean layout, clear prices and helpful product badges."</p>
+          <h3>Maya Singh</h3>
+        </article>
+        <article class="review-card reveal">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&q=80" alt="Customer Noah" loading="lazy">
+          <div class="stars">★★★★☆</div>
+          <p>"Wishlist and quick-view are polished. The mobile menu feels smooth and the store is easy to browse."</p>
+          <h3>Noah Brooks</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="newsletter section reveal">
+      <div>
+        <span>ShopHub Insider</span>
+        <h2>Get weekly deals before they sell out.</h2>
+      </div>
+      <form id="newsletterForm">
+        <label class="sr-only" for="newsletterEmail">Email address</label>
+        <input id="newsletterEmail" type="email" placeholder="Enter your email" required>
+        <button class="gradient-btn" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark"><i class="fa-solid fa-bag-shopping"></i></span><span>ShopHub</span></a>
+        <p>A modern marketplace demo built with HTML, CSS and vanilla JavaScript.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div><h3>About</h3><a href="#">Our story</a><a href="#">Careers</a><a href="#">Sustainability</a></div>
+      <div><h3>Company</h3><a href="#">Sell with us</a><a href="#">Affiliate</a><a href="#">Press</a></div>
+      <div><h3>Help</h3><a href="#">Support</a><a href="#">Shipping</a><a href="#">Returns</a></div>
+      <div><h3>Legal</h3><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div>
+    </div>
+    <p class="copyright">© 2026 ShopHub. All rights reserved.</p>
+  </footer>
+
+  <button class="back-top" id="backTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast-wrap" id="toastWrap" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
