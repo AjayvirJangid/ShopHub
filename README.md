@@ -16,7 +16,7 @@ Built for learning, frontend practice, and portfolio showcasing using HTML, CSS,
 
 ## 📸 Preview
 
-<img width="100%" src="assets/images/preview.png" alt="ShopHub Preview">
+<img width="100%" src="assets/Home.png" alt="ShopHub Preview">
 
 *(Replace the image above with your project screenshot.)*
 
